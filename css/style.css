@@ -1,3 +1,5 @@
+/*  CSS for Universal */
+
 *{
     padding: 0;
     margin: 0;
@@ -5,21 +7,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* body define */
+/* CSS for body define */
 
 body{
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;  
 }
 
-/* Topbar Section */
+/* CSS for Topbar Section */
 
     #topbar{
     background: #e7a;
     height: 50px;
     color: #fff;
     padding: 0rem;
-    font-size: 12px;
+    font-size: 18px;
+    letter-spacing: 0.04rem;
 }
 
 .container-fluid ul li{
@@ -31,4 +34,96 @@ body{
 .contact-info a svg , .Social-link a svg{
     margin-left: 12px;
     margin-right: 12px;
+}
+
+.header .logo{
+    width: 45%;
+    margin-left: 10px;
+}
+
+/* CSS for Dropdown-content setup */
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.dropbtn{
+    background-color:#fff;
+    color:#000 ;
+    border: none;
+    font-size: 16px;
+    text-decoration: solid;
+}
+.dropdown-content a{
+    color: black;
+    padding: 5px;
+    text-decoration:solid;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color:white ;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .dropbtn{
+    background-color: #ff004f;
+}
+
+/* CSS for Navbar Section */
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 10px 10px 10px;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin: 10px 10px 10px 10px; 
+}
+
+nav ul li a{
+    color:#000;
+    text-decoration: none;
+    font-size :16px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content:'';
+    width: 0;
+    background:#e7a;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+    height: 3px;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Responsive  media query mobile view */
+
+@media only screen and (min-width:280px){
+    #topbar{
+        font-size: 10px;
+    }
+
+    .contact-info a svg , .Social-link a svg{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
